@@ -40,13 +40,12 @@ rregexec1(Reprog *progp,	/* program to run */
 	/* Execute machine once for each character, including terminal NUL */
 	s = j->rstarts;
 	do{
-
 		/* fast check for first char */
 		if(checkstart) {
 			switch(j->starttype) {
 			case RUNE:
 				p = runestrchr(s, j->startchar);
-				if(p == 0 || p == j->reol)
+				if(p == 0 || s == j->reol)
 					return match;
 				s = p;
 				break;
