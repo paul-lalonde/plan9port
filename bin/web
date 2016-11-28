@@ -17,7 +17,7 @@ plumbapple()
 
 plumbunix()
 {
-	case "${BROWSER:=firefox}" in
+	case "${BROWSER:-chromium}" in
 	# Other browsers here
 	# ...
 	*opera*)

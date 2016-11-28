@@ -5,7 +5,7 @@ usegcc()
 {
 	cc=${CC9:-gcc}
 	ngflags=" \
-		-O2 \
+                -g \
 		-c \
 		-Wall \
 		-Wno-parentheses \
@@ -54,7 +54,7 @@ useclang()
 {
 	cc=${CC9:-clang}
 	ngflags=" \
-		-O2 \
+                -g \
 		-c \
 		-Wall \
 		-Wno-parentheses \

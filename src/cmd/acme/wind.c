@@ -452,6 +452,7 @@ winsettag1(Window *w)
 	static Rune Lget[] = { ' ', 'G', 'e', 't', 0 };
 	static Rune Lput[] = { ' ', 'P', 'u', 't', 0 };
 	static Rune Llook[] = { ' ', 'L', 'o', 'o', 'k', ' ', 0 };
+	static Rune Ledit[] = { ' ', 'E', 'd', 'i', 't', ' ', 0 };
 	static Rune Lpipe[] = { ' ', '|', 0 };
 
 	/* there are races that get us here with stuff in the tag cache, so we take extra care to sync it */
@@ -506,7 +507,9 @@ winsettag1(Window *w)
 	else{
 		k = w->tag.file->b.nc;
 		if(w->body.file->seq == 0){
-			runemove(new+i, Llook, 6);
+			runemove(new+i, Llook, 5);
+			i += 5;
+			runemove(new+i, Ledit, 6);
 			i += 6;
 		}
 	}

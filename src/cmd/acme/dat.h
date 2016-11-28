@@ -471,7 +471,7 @@ enum
 };
 
 #define Scrollwid scalesize(display, 12)
-#define Scrollgap scalesize(display, 4)
+#define Scrollgap scalesize(display, 8)
 #define Margin scalesize(display, 4)
 #define Border scalesize(display, 2)
 #define ButtonBorder scalesize(display, 2)
