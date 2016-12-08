@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ x"$1" != x ]
+  then
+    export NAMESPACE=/tmp/ns.flux.$1
+   mkdir $NAMESPACE
+fi
+
+F='/mnt/font/Go Mono Bold/13a/font'
+f='/mnt/font/Go Regular/13a/font'
+plumber &
+#acme -l $HOME/acme/acme.$1 -a -f $f -F $F
+acme -l $HOME/acme/$1 -a -f $f -F $F &
